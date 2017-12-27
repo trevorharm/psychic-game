@@ -4,7 +4,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 // create variables needed
 var wins = 0;
 var losses = 0;
-var guesses = 9;
+// var guesses = 9;
 var guessesLeft = 9;
 var userGuessed = [];
 var computerGuess = null;
@@ -18,7 +18,7 @@ var updateGuessesLeft = function() {
     document.querySelector('#guessLeft').innerHTML = "Guesses left: " + guessesLeft;
   };
   
-  var updatecomputerGuess = function() {
+  var updateComputerGuess = function() {
     this.computerGuess = this.computerChoices[Math.floor(Math.random() * this.computerChoices.length)];
   };
   var updateGuessesSoFar = function() {
@@ -27,16 +27,16 @@ var updateGuessesLeft = function() {
   };
   // Function will be called when we reset everything
   var reset = function() {
-    totalGuesses = 9;
+    // guesses = 9;
     guessesLeft = 9;
-    guessedLetters = [];
+    userGuessed = [];
   
     updatecomputerGuess();
     updateGuessesLeft();
     updateGuessesSoFar();
   }
   
-  updatecomputerGuess();
+  updateComputerGuess();
   updateGuessesLeft();
   
   
