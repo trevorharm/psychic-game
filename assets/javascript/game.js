@@ -53,14 +53,14 @@ var updateGuessesLeft = function() {
               if (userGuess == computerGuess){
                   wins++;
                   document.querySelector('#wins').innerHTML = "Wins: " + wins;
-                  alert("Yes, you are psychic!");
+                  alert("Yeah boy! You guessed it!");
                   reset();
               }
           }else if(guessesLeft == 0){
               // Then we will loss and we'll update the html to display the loss 
               losses++;
               document.querySelector('#losses').innerHTML = "Losses: " + losses;
-              alert("Sorry, you're not psychic, maybe try again?");
+              alert("Sorry, you lose!");
               // Then we'll call the reset. 
               reset();
           }
